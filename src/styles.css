@@ -25,3 +25,6 @@
 .modal h2{padding-right:12px}.chat-panel h3{margin-top:0}
 @media(max-width:960px){.location-grid{gap:40px;grid-template-columns:1fr 1.15fr}.location-map{height:430px}.location-copy>p{font-size:12px}.location-actions{gap:18px}}
 @media(max-width:680px){.location-grid{grid-template-columns:1fr;gap:35px}.location-map{height:350px}.location-copy address,.location-hours{font-size:11px}.location-actions .button{font-size:9px}.map-link{left:22px;right:22px;bottom:22px;font-size:9px;padding:16px}.location-copy>small{font-size:8px}}
+/* Keep all three attorneys in view in the new horizontal team photograph. */
+.team-image img{object-position:center center}
+@media(max-width:680px){.team-image{height:auto;aspect-ratio:1.8}.team-image img{object-position:center center}}

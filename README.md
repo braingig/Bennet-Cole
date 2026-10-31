@@ -16,6 +16,7 @@ Features include responsive navigation, reduced-motion-aware Framer Motion revea
 
 Original AI-generated images created with the built-in imagegen tool:
 - `public/images/attorneys.png`: three fictional attorneys in a sunlit historic Charleston law office; natural editorial portrait, forest green and warm walnut palette, no logos or text.
+- `public/images/team-collaboration.png`: a new candid conference-table scene of the three fictional attorneys, created using the original portrait as an identity reference.
 - `public/images/charleston.png`: historic Charleston architecture with ivory stucco, forest green entrance doors, and warm afternoon light; no people, signage, or logos.
 
 Final image prompts are saved in `asset-prompts.md`.

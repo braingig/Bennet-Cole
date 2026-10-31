@@ -9,3 +9,8 @@ Use case: photorealistic-natural. Asset type: premium law firm website hero phot
 ## public/images/charleston.png
 
 Use case: photorealistic-natural. Asset type: law firm website supporting architectural photograph. Original high-end editorial photograph of a historic Charleston South Carolina street corner with an elegant warm ivory stucco building, arched dark forest green double entrance doors, tall sash windows, wrought iron railings and a palm tree to the right edge. Late afternoon sun, refined quiet neighborhood, realistic warm brick sidewalk, thoughtful natural framing with tree shadow on facade, no people, no cars, no text or signs, no logos. Landscape 4:3 composition. Warm limestone, dark green, muted gold color palette, expensive architectural magazine photography, crisp realistic detail. Intended as an understated firm location image.
+
+
+## public/images/team-collaboration.png
+
+Built-in imagegen, with attorneys.png as identity reference. New wide candid editorial photograph of the same three fictional attorneys seated around a walnut conference table in a bright contemporary Charleston office. James at left, Olivia in the middle, Evelyn at right, reviewing papers and conversing naturally. Charcoal and taupe clothing, ivory walls, warm daylight, generous headroom, visible faces, no green clothing, no logos, readable text, extra people or watermarks. Reference preserves faces, ages, ethnicity, and hairstyles while changing clothes, setting, poses, and framing.
