@@ -87,3 +87,7 @@ header.is-scrolled{background:rgba(255,255,255,.97);box-shadow:0 8px 28px #15202
 }
 
 body{overflow-x:clip}
+
+/* Stable viewport for the team's one-time bottom-to-top slide. */
+.team-reveal-frame{overflow:hidden;position:relative}
+@media(prefers-reduced-motion:reduce){.team-reveal-frame>.team-image{transform:none!important}}
