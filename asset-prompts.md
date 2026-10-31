@@ -1,0 +1,11 @@
+# Original image prompts
+
+Generated with the built-in imagegen tool. Both images are illustrative; people and locations do not represent an actual firm.
+
+## public/images/attorneys.png
+
+Use case: photorealistic-natural. Asset type: premium law firm website hero photography. Create an original wide landscape editorial photograph, 3:2 composition, of three fictional American attorneys at a Charleston law firm. Main subject is a confident Black woman aged 40 with shoulder-length softly waved black hair in a beautifully tailored dark forest green pantsuit and ivory blouse, seated casually on edge of antique walnut conference table in foreground right-center, looking at camera, warm slight smile, hands naturally resting together. A distinguished white man age 50 with short salt-and-pepper hair, dark charcoal suit, stands behind left; a younger East Asian woman age 35 with straight dark hair, taupe suit, stands behind right. All subjects clearly distinct and natural. Refined historic law office with tall sunlit sash windows, warm cream walls, walnut wood details and subtle bookshelves. Natural soft afternoon light, realistic skin texture, sophisticated muted green, walnut and warm stone palette. Medium-wide full upper bodies and some legs, ample office environment visible, subjects gathered in right two thirds, left third softly lit interior and wood. Professional architectural portrait photography, understated, reassuring, authentic. No text, no logos, no gavel, no scales, no watermark.
+
+## public/images/charleston.png
+
+Use case: photorealistic-natural. Asset type: law firm website supporting architectural photograph. Original high-end editorial photograph of a historic Charleston South Carolina street corner with an elegant warm ivory stucco building, arched dark forest green double entrance doors, tall sash windows, wrought iron railings and a palm tree to the right edge. Late afternoon sun, refined quiet neighborhood, realistic warm brick sidewalk, thoughtful natural framing with tree shadow on facade, no people, no cars, no text or signs, no logos. Landscape 4:3 composition. Warm limestone, dark green, muted gold color palette, expensive architectural magazine photography, crisp realistic detail. Intended as an understated firm location image.
