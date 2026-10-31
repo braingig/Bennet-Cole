@@ -1,6 +1,6 @@
 # Bennett & Cole
 
-A responsive React + Vite law firm landing page inspired by the Hazzard Law Firm reference. Montserrat headings and Poppins body type are hosted locally. The visual identity uses forest green, warm ivory, and muted gold.
+A responsive React + Vite law firm landing page inspired by the Hazzard Law Firm reference. Montserrat headings and Poppins body type are hosted locally. The visual identity uses deep burgundy, warm ivory, and champagne.
 
 ## Run
 
@@ -10,7 +10,7 @@ npm run dev
 npm run build
 ```
 
-Features include responsive navigation, reduced-motion-aware Framer Motion reveals, practice-area dialogs, fictional attorney biographies, article dialogs, FAQ accordions, and a validated demonstration consultation form. The form does not transmit or persist user information. Replace the fictional business details and wire up a production intake service before using for a real firm.
+Features include responsive navigation, reduced-motion-aware Framer Motion reveals, practice-area dialogs, fictional attorney biographies, article dialogs, FAQ accordions, a dedicated location section with a map and directions, and a validated demonstration consultation form. The form does not transmit or persist user information. Replace the fictional business details and wire up a production intake service before using for a real firm.
 
 ## Assets
 
