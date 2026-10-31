@@ -1,6 +1,6 @@
 # Bennett & Cole
 
-A responsive React + Vite law firm landing page inspired by the Hazzard Law Firm reference. Montserrat headings and Poppins body type are hosted locally. The visual identity uses deep burgundy, warm ivory, and champagne.
+A responsive React + Vite law firm landing page inspired by the Hazzard Law Firm reference. Montserrat headings and Poppins body type are hosted locally. The visual identity uses warm charcoal, ivory, and bronze.
 
 ## Run
 
