@@ -28,3 +28,62 @@
 /* Keep all three attorneys in view in the new horizontal team photograph. */
 .team-image img{object-position:center center}
 @media(max-width:680px){.team-image{height:auto;aspect-ratio:1.8}.team-image img{object-position:center center}}
+
+/* Motion system: entrances, scroll feedback, and tactile interactions. */
+.scroll-progress{position:fixed;top:0;left:0;right:0;height:3px;background:var(--gold);transform-origin:left center;z-index:90;pointer-events:none}
+header{transition:box-shadow .4s,background-color .4s}
+header.is-scrolled{background:rgba(255,255,255,.97);box-shadow:0 8px 28px #1520260c;backdrop-filter:blur(14px)}
+.hero h1>.hero-line{display:block;overflow:hidden;color:inherit;padding-bottom:.04em;margin-bottom:-.04em}
+.hero h1>.hero-line.gold{color:var(--gold)}
+.hero-line>span{display:block;transform-origin:left bottom}
+.hero-photo img{height:100%;will-change:transform}
+.hero-bottom a svg{animation:discover-arrow 1.8s ease-in-out 3}
+@keyframes discover-arrow{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+.button{position:relative;overflow:hidden;isolation:isolate;transition:background .3s,transform .3s,color .3s,box-shadow .3s}
+.button:before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,transparent 20%,#ffffff24 50%,transparent 80%);transform:translateX(-120%);transition:transform .65s ease;pointer-events:none}
+.button:hover:before,.button:focus-visible:before{transform:translateX(120%)}
+.button:hover{box-shadow:0 9px 22px #15202614}
+.button:active{transform:translateY(-1px) scale(.985)}
+.values-bar .wrap>div{transition:transform .35s,color .35s}
+.values-bar .wrap>div:hover{transform:translateY(-3px);color:#9c7c3e}
+.values-bar svg{transition:transform .5s}
+.values-bar .wrap>div:hover svg{transform:rotate(-8deg)}
+.about-photo>img{transition:transform 1.1s cubic-bezier(.22,1,.36,1)}
+.about-photo:hover>img{transform:scale(1.035)}
+.about-photo{overflow:visible}
+.about-photo>img{clip-path:inset(0)}
+.image-label,.team-stamp{transition:transform .6s cubic-bezier(.22,1,.36,1),box-shadow .6s}
+.about-photo:hover .image-label,.team-image:hover .team-stamp{transform:translateY(-7px);box-shadow:0 12px 28px #15202618}
+.practice-item{position:relative;transition:background-color .4s}
+.practice-item:after{content:'';position:absolute;left:0;right:0;bottom:-1px;height:2px;background:#ac8c5e;transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.22,1,.36,1)}
+.practice-item:hover:after,.practice-item:focus-within:after{transform:scaleX(1)}
+.practice-item:hover{background:#e9e4db55}
+.practice-item h3,.practice-item p{transition:transform .4s}
+.practice-item:hover h3,.practice-item:hover p{transform:translateX(3px)}
+.practice-link svg,.team-names svg,.insight-image>span svg,.map-link>svg:last-child{transition:transform .4s cubic-bezier(.22,1,.36,1)}
+.practice-item:hover .practice-link svg,.team-names button:hover svg,.insight-card:hover .insight-image>span svg,.map-link:hover>svg:last-child{transform:translate(3px,-3px)}
+.team-names button{transition:border-color .4s}
+.team-names button:hover{border-color:#ac8c5e}
+.process-grid>div{position:relative}
+.step-number{transition:color .4s,letter-spacing .4s}
+.process-grid>div:hover .step-number{color:#ac8c5e;letter-spacing:-1px}
+.insight-card h3{transition:color .3s}
+.insight-card:hover h3{color:#95794d}
+.form-box{transition:box-shadow .5s}
+.form-box:focus-within{box-shadow:0 20px 50px #0003}
+.faq-answer{overflow:hidden}
+.faq-item h3 svg{transition:transform .3s}
+.faq-item.is-open h3 svg{transform:rotate(180deg)}
+.nav-open{animation:menu-enter .3s cubic-bezier(.22,1,.36,1)}
+@keyframes menu-enter{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+@media(hover:none){.hero-photo img{will-change:auto}.button:hover{transform:none;box-shadow:none}}
+@media(prefers-reduced-motion:reduce){
+ .scroll-progress{display:none}
+ *,*:before,*:after{animation:none!important;transition:none!important}
+ .hero-photo img{transform:none!important;will-change:auto}
+ .hero-line>span{transform:none!important;opacity:1!important}
+ .hero-content>div{transform:none!important}
+ .button:hover,.button:active,.about-photo:hover>img,.about-photo:hover .image-label,.team-image:hover .team-stamp,.values-bar .wrap>div:hover,.values-bar .wrap>div:hover svg,.practice-item:hover h3,.practice-item:hover p,.practice-item:hover .practice-link svg,.team-names button:hover svg,.insight-card:hover .insight-image>span svg,.map-link:hover>svg:last-child{transform:none!important}
+}
+
+body{overflow-x:clip}

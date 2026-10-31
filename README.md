@@ -20,3 +20,8 @@ Original AI-generated images created with the built-in imagegen tool:
 - `public/images/charleston.png`: historic Charleston architecture with ivory stucco, forest green entrance doors, and warm afternoon light; no people, signage, or logos.
 
 Final image prompts are saved in `asset-prompts.md`.
+
+
+## Motion
+
+The landing page uses staggered masked hero text, gentle hero-image parallax, directional section entrances, image clip reveals, staggered content, a scroll progress indicator, hover accents, animated FAQ height, and entrance/exit transitions for dialogs and quick contact. Motion respects the visitor's reduced-motion setting; core content and controls remain available without animation.
