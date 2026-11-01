@@ -9,3 +9,31 @@
 
 .page-hero-image.page-hero-group{height:auto;aspect-ratio:2.2}
 .page-hero-image.page-hero-group img{object-fit:cover;object-position:center}
+
+/* Practice-area heroes: editorial heading, panoramic image, direct navigation. */
+.practice-hero{background:var(--cream);padding:48px 0 0}
+.practice-hero .breadcrumbs{margin-bottom:38px}
+.practice-hero-heading{display:grid;grid-template-columns:1.12fr 1fr;align-items:center;gap:95px;margin-bottom:48px}
+.practice-hero h1{font-family:Montserrat,sans-serif;font-size:clamp(44px,5.3vw,74px);font-weight:750;line-height:1.08;letter-spacing:-2.6px;color:var(--ink);max-width:680px}
+.practice-hero-intro{font-size:19px;font-weight:400;line-height:1.75;max-width:450px;color:#737978;margin-bottom:23px}
+.practice-hero-heading .text-link{font-size:11px;gap:30px}
+.practice-hero-image{height:420px;overflow:hidden;background:#e4dfd5}
+.practice-hero-media{width:100%;height:100%;transform-origin:center bottom}
+.practice-hero-media img{height:100%;width:100%;object-fit:cover;object-position:center 50%}
+.practice-image-family-law img{object-position:center 55%}
+.practice-image-personal-injury img{object-position:center 45%}
+.practice-switcher{display:grid;grid-template-columns:repeat(4,1fr);background:var(--charcoal);color:#e2e3de}
+.practice-switcher>a{position:relative;display:flex;align-items:center;gap:13px;min-height:82px;padding:22px 25px;border-right:1px solid #ffffff1a;font-size:11px;transition:color .3s,background .3s;white-space:nowrap}
+.practice-switcher>a:last-child{border-right:0}
+.practice-switcher>a>svg:first-child{color:var(--gold);flex-shrink:0}
+.practice-switcher>a>svg:last-child{margin-left:auto;transition:transform .3s}
+.practice-switcher>a:after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.22,1,.36,1)}
+.practice-switcher>a:hover,.practice-switcher>a[aria-current="page"]{background:#ffffff0b;color:#fff}
+.practice-switcher>a:hover:after,.practice-switcher>a[aria-current="page"]:after{transform:scaleX(1)}
+.practice-switcher>a:hover>svg:last-child{transform:translate(3px,-3px)}
+.practice-hero-overview h1{font-size:clamp(40px,4.3vw,61px);line-height:1.14}
+@media(min-width:1600px){.practice-hero-image{height:470px}}
+@media(max-width:1200px){.practice-hero-heading{gap:65px}.practice-hero h1{font-size:57px}.practice-hero-intro{font-size:17px}.practice-switcher>a{padding:20px;gap:10px;font-size:10px}.practice-hero-image{height:390px}}
+@media(max-width:960px){.practice-hero-heading{gap:40px;margin-bottom:38px}.practice-hero h1{font-size:49px;letter-spacing:-2px}.practice-hero-intro{font-size:16px}.practice-hero-heading .text-link{font-size:10px;gap:18px}.practice-switcher>a{padding:18px 14px;min-height:73px;gap:9px;font-size:9px}.practice-switcher>a>svg:first-child{width:18px}.practice-switcher>a>svg:last-child{width:13px}.practice-hero-image{height:350px}}
+@media(max-width:680px){.practice-hero{padding-top:30px}.practice-hero .breadcrumbs{font-size:8px;margin-bottom:30px}.practice-hero-heading{display:block;margin-bottom:32px}.practice-hero h1,.practice-hero-overview h1{font-size:42px;line-height:1.14;letter-spacing:-1.7px;max-width:440px}.practice-hero-intro{font-size:15px;line-height:1.85;margin:23px 0 17px}.practice-hero-heading .text-link{font-size:10px;gap:23px}.practice-hero-image{height:260px;margin-left:-20px;margin-right:-20px}.practice-switcher{display:flex;overflow-x:auto;scrollbar-width:thin;scrollbar-color:#ac9670 var(--charcoal);margin-left:-20px;margin-right:-20px}.practice-switcher>a{flex:0 0 auto;min-width:190px;min-height:73px;padding:20px;font-size:10px;gap:12px}.practice-switcher>a>svg:first-child{width:21px}.practice-switcher>a>svg:last-child{margin-left:10px}.practice-image-family-law img{object-position:center 55%}.practice-hero-overview .practice-hero-image{height:250px}}
+@media(prefers-reduced-motion:reduce){.practice-hero-media{transform:none!important}.practice-switcher>a:hover>svg:last-child{transform:none!important}}
