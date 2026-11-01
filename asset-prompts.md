@@ -14,3 +14,8 @@ Use case: photorealistic-natural. Asset type: law firm website supporting archit
 ## public/images/team-collaboration.png
 
 Built-in imagegen, with attorneys.png as identity reference. New wide candid editorial photograph of the same three fictional attorneys seated around a walnut conference table in a bright contemporary Charleston office. James at left, Olivia in the middle, Evelyn at right, reviewing papers and conversing naturally. Charcoal and taupe clothing, ivory walls, warm daylight, generous headroom, visible faces, no green clothing, no logos, readable text, extra people or watermarks. Reference preserves faces, ages, ethnicity, and hairstyles while changing clothes, setting, poses, and framing.
+
+
+## Individual attorney portraits
+
+Built-in imagegen, using the original attorneys.png as an identity reference for each person. Each prompt requests one person only, a 4:5 mid-torso editorial portrait with generous headroom, natural confident posture, subtle warm smile looking at camera, in a softly defocused ivory Charleston office with walnut details and natural light. Preserve face, age, ethnicity and hair. James and Olivia wear charcoal blazers with ivory shirts; Evelyn wears taupe. No green clothes, logos, text, other people, or collage. Saved as james-cole.png, olivia-bennett.png, and evelyn-park.png.

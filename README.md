@@ -1,27 +1,36 @@
 # Bennett & Cole
 
-A responsive React + Vite law firm landing page inspired by the Hazzard Law Firm reference. Montserrat headings and Poppins body type are hosted locally. The visual identity uses warm charcoal, ivory, and bronze.
+A complete React website built with the supported Vinext/Cloudflare Workers starter.
 
-## Run
+## Pages
+
+Home, Our Firm, Practice Areas, four practice detail pages, Our People, three attorney profiles, a searchable/filterable insights library with six articles, Location, Contact, Privacy, Terms, and an owner-only consultation inbox. Unknown routes return HTTP 404. Page titles, robots.txt, and sitemap.xml are included.
+
+## Local development
 
 ```sh
 npm install
-npm run dev
+npm run dev -- --port 3020 --hostname 127.0.0.1
 npm run build
 ```
 
-Features include responsive navigation, reduced-motion-aware Framer Motion reveals, practice-area dialogs, fictional attorney biographies, article dialogs, FAQ accordions, a dedicated location section with a map and directions, and a validated demonstration consultation form. The form does not transmit or persist user information. Replace the fictional business details and wire up a production intake service before using for a real firm.
+The tracked `.openai/hosting.json` retains the existing Site identity and declares the D1 `DB` binding. Apply the generated migration to a local database after a build:
 
-## Assets
+```sh
+node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --local --config dist/server/wrangler.json --persist-to .wrangler/state --file drizzle/0000_last_malice.sql
+```
 
-Original AI-generated images created with the built-in imagegen tool:
-- `public/images/attorneys.png`: three fictional attorneys in a sunlit historic Charleston law office; natural editorial portrait, forest green and warm walnut palette, no logos or text.
-- `public/images/team-collaboration.png`: a new candid conference-table scene of the three fictional attorneys, created using the original portrait as an identity reference.
-- `public/images/charleston.png`: historic Charleston architecture with ivory stucco, forest green entrance doors, and warm afternoon light; no people, signage, or logos.
+## Consultation requests
 
-Final image prompts are saved in `asset-prompts.md`.
+`POST /api/inquiries` validates and persists requests, gives each one a reference number, handles retries idempotently, checks same-origin submissions, and limits repeated requests using a hashed connection identifier. It does not email notifications. The displayed `.example` email address is retained at the user's request and cannot receive email.
 
+`/inbox` uses Sites-owned ChatGPT sign-in. Server-side access checks restrict the inbox and request-status API to `INBOX_OWNER_EMAIL`. These runtime settings are configured as Sites secrets and must not be committed. Local `.dev.vars` is ignored.
 
-## Motion
+- `INBOX_OWNER_EMAIL`: allowed owner account email.
+- `INQUIRY_HASH_SALT`: server-side salt for the connection identifier.
 
-The landing page uses staggered masked hero text, gentle hero-image parallax, directional section entrances, image clip reveals, staggered content, a scroll progress indicator, hover accents, animated FAQ height, and entrance/exit transitions for dialogs and quick contact. Motion respects the visitor's reduced-motion setting; core content and controls remain available without animation.
+## Design and motion
+
+Shared charcoal, ivory, and bronze palette; locally hosted Montserrat/Poppins; consistent headers, footers, calls to action, spacious layouts, responsive navigation, section entrances, hero parallax, a one-time upward team-image reveal, hover accents, FAQ transitions, and reduced-motion support. Existing supporting subheadings were increased by 1px.
+
+Original AI-created portraits and architectural imagery live in `public/images/`. The generated prompts and asset provenance are recorded in `asset-prompts.md`; these internal development notes are not shown to visitors.
