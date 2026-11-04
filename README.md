@@ -34,3 +34,23 @@ node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1
 Shared charcoal, ivory, and bronze palette; locally hosted Montserrat/Poppins; consistent headers, footers, calls to action, spacious layouts, responsive navigation, section entrances, hero parallax, a one-time upward team-image reveal, hover accents, FAQ transitions, and reduced-motion support. Existing supporting subheadings were increased by 1px.
 
 Original AI-created portraits and architectural imagery live in `public/images/`. The generated prompts and asset provenance are recorded in `asset-prompts.md`; these internal development notes are not shown to visitors.
+
+
+## Vercel deployment
+
+The repository supports both the existing Sites/Cloudflare Worker deployment and native Next.js on Vercel.
+
+- Vercel uses `npm run build:vercel` and the standard `.next` output, declared in `vercel.json`.
+- `VERCEL=1 npm run build` selects the same native Next.js build automatically.
+- `npm run build` outside Vercel retains the Sites build; `npm run build:sites` selects it explicitly.
+- Node is pinned to the supported 22.x major.
+- Cloudflare-specific imports are replaced with an empty binding shim only in the native Next.js webpack build. Cloudflare builds retain their real bindings.
+- Vercel public pages run natively. `/contact` and `/inbox` redirect to the existing secure Sites host, preserving its D1 database and ChatGPT owner authentication. The homepage consultation card links to that intake form. No Cloudflare credentials or authentication headers are copied into Vercel.
+- Keep the Vercel project's Framework Preset as Next.js. Leave its Output Directory at the repository setting (`.next`), rather than `dist`.
+
+To verify a Vercel build locally:
+
+```sh
+npm run build:vercel
+npm run start:vercel -- --port 3030
+```
